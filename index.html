@@ -1,95 +1,161 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PluginWeb</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PluginWeb</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="animated-bg"></div>
 
 <header>
-    <h1 class="logo">PluginWeb</h1>
-    <nav>
-        <a href="#" class="nav-btn" onclick="showPluginInfo('pluginok')">Pluginok</a>
-        <a href="#" class="nav-btn" onclick="showPluginInfo('support')">Support</a>
-    </nav>
+  <h1 class="logo">PluginWeb</h1>
+  <nav>
+    <a href="#" class="nav-btn" onclick="showPluginInfo('pluginok')">Pluginok</a>
+    <a href="#" class="nav-btn" onclick="showPluginInfo('support')">Support</a>
+  </nav>
 </header>
 
 <section class="intro" id="intro">
-    <p>Ez a weboldal <b>zrinyiiww</b> tulajdonában áll.</p>
-    <p>Itt pluginokat lehet kapni, és így lehet ízelítőt nézni.</p>
-    <p id="paid-info"></p>
+  <p>Ez a weboldal <b>zrinyiiww</b> tulajdonában áll.</p>
+  <p>Itt pluginokat lehet kapni, és így lehet ízelítőt nézni.</p>
 </section>
 
 <section class="plugins" id="plugins-section">
 
-    <!-- WorldEdit - ingyenes -->
-    <div class="card">
-        <h2>WorldEdit</h2>
-        <p class="version">Verzió: 7.3.9 (MC 1.20 – 1.21)</p>
-        <p>Gyors és profi map szerkesztő Minecraft szerverekhez.</p>
-        <a href="plugins/worldedit-bukkit-7.3.9.jar" download>
-            <button>Letöltés</button>
-        </a>
-    </div>
+  <!-- WorldEdit - ingyenes -->
+  <div class="card">
+    <h2>WorldEdit</h2>
+    <p class="version">Verzió: 7.3.9 (MC 1.20 – 1.21)</p>
+    <p>Gyors és profi map szerkesztő Minecraft szerverekhez.</p>
+    <a href="plugins/worldedit-bukkit-7.3.9.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
 
-    <!-- Oraxen - fizetős -->
-    <div class="card paid" onmouseenter="showPaidInfo('Oraxen')" onmouseleave="clearPaidInfo()">
-        <div class="paid-star">★</div>
-        <h2>Oraxen</h2>
-        <p class="version">Verzió: 1.0 (MC 1.18 – 1.21.5)</p>
-        <p>Texture pack / extra funkciók Minecraft szerverhez.</p>
-        <a href="plugins/oraxen.jar" download>
-            <button>Letöltés</button>
-        </a>
+  <!-- Oraxen - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
     </div>
+    <h2>Oraxen</h2>
+    <p class="version">Verzió: 1.0 (MC 1.18 – 1.21.5)</p>
+    <p>Texture pack / extra funkciók Minecraft szerverhez.</p>
+    <a href="plugins/oraxen.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
 
-    <!-- Nexo - fizetős -->
-    <div class="card paid" onmouseenter="showPaidInfo('Nexo')" onmouseleave="clearPaidInfo()">
-        <div class="paid-star">★</div>
-        <h2>Nexo</h2>
-        <p class="version">Verzió: 1.15 (MC 1.15)</p>
-        <p>Texture pack / extra funkciók Minecraft szerverhez.</p>
-        <a href="plugins/nexo.jar" download>
-            <button>Letöltés</button>
-        </a>
+  <!-- Nexo - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
     </div>
+    <h2>Nexo</h2>
+    <p class="version">Verzió: 1.15 (MC 1.15)</p>
+    <p>Texture pack / extra funkciók Minecraft szerverhez.</p>
+    <a href="plugins/nexo.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
 
-    <!-- ItemsAdder - fizetős -->
-    <div class="card paid" onmouseenter="showPaidInfo('ItemsAdder')" onmouseleave="clearPaidInfo()">
-        <div class="paid-star">★</div>
-        <h2>ItemsAdder</h2>
-        <p class="version">Verzió: 4.0.15 (MC 1.16 – 1.21)</p>
-        <p>Texture pack és item kiegészítők Minecraft szerverekhez.</p>
-        <a href="plugins/itemsadder-4.0.15.jar" download>
-            <button>Letöltés</button>
-        </a>
+  <!-- ItemsAdder - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
     </div>
+    <h2>ItemsAdder</h2>
+    <p class="version">Verzió: 4.0.15 (MC 1.16 – 1.21)</p>
+    <p>Texture pack és item kiegészítők Minecraft szerverekhez.</p>
+    <a href="plugins/itemsadder-4.0.15.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
 
-    <!-- Citizens - fizetős -->
-    <div class="card paid" onmouseenter="showPaidInfo('Citizens')" onmouseleave="clearPaidInfo()">
-        <div class="paid-star">★</div>
-        <h2>Citizens</h2>
-        <p class="version">Verzió: 2.0 (MC 1.16 – 1.21)</p>
-        <p>NPC-k létrehozása Minecraft szervereken.</p>
-        <a href="plugins/citizens.jar" download>
-            <button>Letöltés</button>
-        </a>
+  <!-- Citizens - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
     </div>
+    <h2>Citizens</h2>
+    <p class="version">Verzió: 2.0 (MC 1.16 – 1.21)</p>
+    <p>NPC-k létrehozása Minecraft szervereken.</p>
+    <a href="plugins/citizens.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
 
-    <!-- KingdomsX - fizetős -->
-    <div class="card paid" onmouseenter="showPaidInfo('KingdomsX')" onmouseleave="clearPaidInfo()">
-        <div class="paid-star">★</div>
-        <h2>KingdomsX</h2>
-        <p class="version">Verzió: 1.16.20.5 (MC 1.16 – 1.20)</p>
-        <p>Gazdag kingdom plugin szerverekhez.</p>
-        <a href="plugins/KingdomsX-1.16.20.5.jar" download>
-            <button>Letöltés</button>
-        </a>
+  <!-- KingdomsX - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
     </div>
+    <h2>KingdomsX</h2>
+    <p class="version">Verzió: 1.16.20.5 (MC 1.16 – 1.20)</p>
+    <p>Gazdag kingdom plugin szerverekhez.</p>
+    <a href="plugins/KingdomsX-1.16.20.5.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
+
+  <!-- FastAsyncWorldEdit - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
+    </div>
+    <h2>FastAsyncWorldEdit</h2>
+    <p class="version">Verzió: 2.14.2 (MC 1.20 – 1.21)</p>
+    <p>Gyors, fejlett WorldEdit Bukkit szerverekhez.</p>
+    <a href="plugins/FastAsyncWorldEdit-Bukkit-2.14.2.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
+
+  <!-- AxAuctions - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
+    </div>
+    <h2>AxAuctions</h2>
+    <p class="version">Verzió: 1.9.2 (MC 1.18 – 1.21)</p>
+    <p>Aukció plugin Minecraft szerverekhez.</p>
+    <a href="plugins/AxAuctions-1.9.2.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
+
+  <!-- AxAFKZone - ingyenes -->
+  <div class="card">
+    <h2>AxAFKZone</h2>
+    <p class="version">Verzió: 1.4.1 (MC 1.18 – 1.21)</p>
+    <p>AFK zóna plugin Minecraft szerverekhez.</p>
+    <a href="plugins/AxAFKZone-1.4.1.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
+
+  <!-- AxKoth - fizetős -->
+  <div class="card paid">
+    <div class="paid-star">
+      ★
+      <span class="tooltip-text">Ez egy fizetős plugin</span>
+    </div>
+    <h2>AxKoth</h2>
+    <p class="version">Verzió: 2.4.1 (MC 1.18 – 1.21)</p>
+    <p>KOTH plugin Minecraft szerverekhez.</p>
+    <a href="plugins/AxKoth-2.4.1.jar" download>
+      <button>Letöltés</button>
+    </a>
+  </div>
 
 </section>
 
