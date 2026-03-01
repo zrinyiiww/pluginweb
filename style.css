@@ -73,13 +73,6 @@ nav a:hover{
   animation:fadeIn 1s ease;
 }
 
-#paid-info{
-  margin-top:10px;
-  color: gold;
-  font-weight:bold;
-  font-size:16px;
-}
-
 /* PLUGIN KÁRTYA */
 .plugins{
   display:flex;
@@ -111,6 +104,29 @@ nav a:hover{
   right:10px;
   color:gold;
   font-size:20px;
+  cursor: pointer;
+}
+
+/* TOOLTIP */
+.tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.paid-star:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
 
 .version{
